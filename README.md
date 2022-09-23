@@ -2,11 +2,11 @@
 
 # Building an NFT marketplace with Polygon, Next.js, Tailwind, Solidity, Hardhat, Ethers.js, and IPFS
 
-When a user puts an NFT for sale, the ownership of the item will be transferred from the creator to the marketplace contract.
+When a user puts an NFT for sale, the ownership of the item will be transferred from the creator to the marketplace contract.<br />
 
-When a user purchases an NFT, the purchase price will be transferred from the buyer to the seller and the item will be transferred from the marketplace to the buyer.
+When a user purchases an NFT, the purchase price will be transferred from the buyer to the seller and the item will be transferred from the marketplace to the buyer.<br />
 
-The marketplace owner will be able to set a listing fee. This fee will be taken from the seller and transferred to the contract owner upon completion of any sale, enabling the owner of the marketplace to earn recurring revenue from any sale transacted in the marketplace.
+The marketplace owner will be able to set a listing fee. This fee will be taken from the seller and transferred to the contract owner upon completion of any sale,<br /> enabling the owner of the marketplace to earn recurring revenue from any sale transacted in the marketplace.
 
 # Prerequisites
 
@@ -15,10 +15,10 @@ The marketplace owner will be able to set a listing fee. This fee will be taken 
 
 # The Stack
 
-Web application framework - [Next.js](https://nextjs.org/) 
-Solidity development environment - [Hardhat](https://hardhat.org/) 
+Web application framework - [Next.js](https://nextjs.org/) <br />
+Solidity development environment - [Hardhat](https://hardhat.org/) <br />
 File Storage - [IPFS](https://nft.storage/) 
-Ethereum Web Client Library -[ Ethers.js](https://docs.ethers.io/v5/) 
+Ethereum Web Client Library -[ Ethers.js](https://docs.ethers.io/v5/) <br />
 
 # Setting up Tailwind CSS
 
