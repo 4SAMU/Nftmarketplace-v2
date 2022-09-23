@@ -15,10 +15,10 @@ The marketplace owner will be able to set a listing fee. This fee will be taken 
 
 # The Stack
 
-Web application framework - [Next.js](https://nextjs.org/)
-Solidity development environment - [Hardhat](https://hardhat.org/)
-File Storage - [IPFS](https://nft.storage/)
-Ethereum Web Client Library -[ Ethers.js](https://docs.ethers.io/v5/)
+Web application framework - [Next.js](https://nextjs.org/) 
+Solidity development environment - [Hardhat](https://hardhat.org/) 
+File Storage - [IPFS](https://nft.storage/) 
+Ethereum Web Client Library -[ Ethers.js](https://docs.ethers.io/v5/) 
 
 # Setting up Tailwind CSS
 
