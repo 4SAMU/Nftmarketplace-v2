@@ -1,0 +1,209 @@
+/** @format */
+
+.createnftpage {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: #01204c;
+  overflow: auto;
+  top: 40px;
+}
+
+.createnftpage_content {
+  position: relative;
+  width: 863px;
+  height: 843px;
+  left: 50%;
+  transform: translate(-50%);
+  top: 80px;
+}
+
+.name {
+  position: relative;
+  width: max-content;
+  height: 29px;
+  left: 15px;
+  top: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.inputname {
+  box-sizing: border-box;
+  position: absolute;
+  width: 719px;
+  height: 60px;
+  left: 15px;
+  top: 60px;
+  font-size: 17px;
+  outline: 0ch;
+  background: #ffffff;
+  border: 1px solid #000000;
+}
+
+.description {
+  position: relative;
+  width: max-content;
+  height: 29px;
+  left: 15px;
+  top: 120px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.textarea {
+  box-sizing: border-box;
+  position: absolute;
+  width: 719px;
+  height: 200px;
+  left: 15px;
+  top: 180px;
+  font-size: 17px;
+  outline: 0ch;
+  background: #ffffff;
+  border: 0ch;
+  border-right: 2px solid #0669fc;
+  resize: none;
+}
+
+.emoji {
+  box-sizing: border-box;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 527px;
+  top: 181px;
+  outline: 0ch;
+  background: #ffffff;
+  border: 0ch;
+  resize: none;
+}
+
+.price {
+  position: absolute;
+  width: max-content;
+  height: 29px;
+  left: 15px;
+  top: 400px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.inputprice {
+  box-sizing: border-box;
+  position: absolute;
+  width: 719px;
+  height: 60px;
+  left: 15px;
+  top: 440px;
+  font-size: 17px;
+  outline: 0ch;
+  background: #ffffff;
+}
+
+.selectfile {
+  position: absolute;
+  width: 719px;
+  height: 60px;
+  left: 15px;
+  top: 540px;
+  font-size: 25px;
+  line-height: 40px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  color: antiquewhite;
+}
+
+.uploadbtn {
+  position: absolute;
+  width: 222px;
+  height: 62px;
+  left: 15px;
+  top: 650px;
+  background: #0669fc;
+  border-radius: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 33px;
+  color: #ffffff;
+  border: 0ch;
+}
+
+@media screen and (max-width: 1400px) {
+  .inputname {
+    box-sizing: border-box;
+    position: absolute;
+    width: 650px;
+    height: 60px;
+    left: 15px;
+    top: 60px;
+    font-size: 17px;
+    outline: 0ch;
+    background: #ffffff;
+    border: none;
+  }
+  .textarea {
+    box-sizing: border-box;
+    position: absolute;
+    width: 650px;
+    height: 200px;
+    left: 15px;
+    top: 180px;
+    font-size: 17px;
+    outline: 0ch;
+    background: #ffffff;
+    border: 0ch;
+    resize: none;
+  }
+  .inputprice {
+    box-sizing: border-box;
+    position: absolute;
+    width: 650px;
+    height: 60px;
+    left: 15px;
+    top: 440px;
+    font-size: 17px;
+    outline: 0ch;
+    border: none;
+    background: #ffffff;
+  }
+  .createnftpage_content {
+    position: relative;
+    width: 863px;
+    height: 843px;
+    left: 55%;
+    transform: translate(-50%);
+    top: 80px;
+  }
+  .uploadbtn {
+    position: absolute;
+    width: 222px;
+    height: 58px;
+    left: 15px;
+    top: 650px;
+    background: #0669fc;
+    border-radius: 20px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 33px;
+    color: #ffffff;
+    border: 0ch;
+  }
+}

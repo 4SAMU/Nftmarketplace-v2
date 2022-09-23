@@ -1,34 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- @format -->
 
-## Getting Started
+# Building an NFT marketplace with Polygon, Next.js, Tailwind, Solidity, Hardhat, Ethers.js, and IPFS
 
-First, run the development server:
+When a user puts an NFT for sale, the ownership of the item will be transferred from the creator to the marketplace contract.
 
-```bash
-npm run dev
-# or
-yarn dev
+When a user purchases an NFT, the purchase price will be transferred from the buyer to the seller and the item will be transferred from the marketplace to the buyer.
+
+The marketplace owner will be able to set a listing fee. This fee will be taken from the seller and transferred to the contract owner upon completion of any sale, enabling the owner of the marketplace to earn recurring revenue from any sale transacted in the marketplace.
+
+# Prerequisites
+
+-Node.js version 16.14.0 or greater installed on your machine. I recommend installing Node using either nvm or fnm.
+-Metamask wallet extension installed as a browser extension
+
+# The Stack
+
+Web application framework - [Next.js](https://nextjs.org/)
+Solidity development environment - [Hardhat](https://hardhat.org/)
+File Storage - [IPFS](https://nft.storage/)
+Ethereum Web Client Library -[ Ethers.js](https://docs.ethers.io/v5/)
+
+# Setting up Tailwind CSS
+
+```shell
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+
+npx tailwindcss init -p
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# in tailwind.config.js:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```js
+/* tailwind.config.js */
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Finally, delete the code in styles/globals.css and update it with the following:
 
-## Learn More
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# hardhat.config.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```js
+/* hardhat.config.js */
+require("@nomiclabs/hardhat-waffle")
 
-## Deploy on Vercel
+module.exports = {
+  defaultNetwork: "hardhat",
+  networks: {
+    hardhat: {
+      chainId: 1337
+    },
+ mumbai: {
+  url: "https://rpc-mumbai.maticvigil.com",
+   accounts: [process.env.privateKey]
+  }
+  },
+  solidity: {
+    version: "0.8.4",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  }
+}
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
