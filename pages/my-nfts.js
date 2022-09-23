@@ -76,7 +76,7 @@ export default function MyAssets() {
                   Price - {nft.price} Eth
                 </p>
                 <button
-                  className="mt-4 w-full bg-pink-500 text-white font-bold py-2 px-12 rounded"
+                  className="mt-4 w-full bg-blue-500 text-white font-bold py-2 px-12 rounded"
                   onClick={() => listNFT(nft)}
                 >
                   List

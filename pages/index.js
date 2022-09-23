@@ -111,12 +111,12 @@ export default function Home() {
               <div className="p-4 bg-black">
                 <p className="text-2xl font-bold text-white">{nft.price} ETH</p>
                 {(currAddress === nft.owner) || (currAddress === nft.seller) ? (
-                  <button className="mt-4 w-full bg-pink-500 text-white font-bold py-2 px-12 rounded">
+                  <button className="mt-4 w-full bg-blue-500 text-white font-bold py-2 px-12 rounded">
                     You own this
                   </button>
                 ):(
                   <button
-                    className="mt-4 w-full bg-pink-500 text-white font-bold py-2 px-12 rounded"
+                    className="mt-4 w-full bg-blue-500 text-white font-bold py-2 px-12 rounded"
                     onClick={() => buyNft(nft)}
                   >
                     Buy

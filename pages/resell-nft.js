@@ -16,7 +16,7 @@ export default function ResellNFT() {
   const router = useRouter();
   const { id, tokenURI } = router.query;
   const { image, price } = formInput;
-  const[imageK, setImage]=useState("")
+  const [imageK, setImage] = useState("");
 
   useEffect(() => {
     fetchNFT();
@@ -24,7 +24,7 @@ export default function ResellNFT() {
 
   async function fetchNFT() {
     if (!tokenURI) return;
-     const web3Modal = new Web3Modal({
+    const web3Modal = new Web3Modal({
       network: "mainnet",
       cacheProvider: true,
     });
@@ -63,7 +63,7 @@ export default function ResellNFT() {
         return item;
       })
     );
-    setImage(image)
+    setImage(image);
     updateFormInput((state) => ({ ...state, image: image }));
   }
 
@@ -104,7 +104,7 @@ export default function ResellNFT() {
         {image && <img className="rounded mt-4" width="350" src={data.image} />}
         <button
           onClick={listNFTForSale}
-          className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg"
+          className="font-bold mt-4 bg-blue-500 text-white rounded p-4 shadow-lg"
         >
           List NFT
         </button>

@@ -18,7 +18,7 @@ const CreateNft = () => {
   });
 
   const [selectedFile, setSelectedFile] = useState(null);
-    const inputFileRef = useRef(null);
+  const inputFileRef = useRef(null);
 
   function inputFileHandler() {
     if (selectedFile) {
@@ -71,7 +71,6 @@ const CreateNft = () => {
     }
 
     try {
-      
       if (formParams.price < 0.01) {
         alert("minimum price is 0.01");
       } else {
@@ -87,7 +86,6 @@ const CreateNft = () => {
     } catch (error) {
       if (error) {
         alert("failed " + error.message);
-       
       }
     }
   }
@@ -96,7 +94,7 @@ const CreateNft = () => {
     await mintNFThandler();
     try {
       if (!metadataURL) {
-        alert("lease click listNft again")
+        alert("lease click listNft again");
       } else {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
@@ -122,12 +120,10 @@ const CreateNft = () => {
         await transaction.wait();
         updateFormParams({ name: "", description: "", price: "" });
         alert("Mint Successfull !");
-        
       }
     } catch (error) {
       if (error) {
         alert("failed " + error.message);
-       
       }
     }
   };
@@ -200,7 +196,7 @@ const CreateNft = () => {
             ></input>
           </div>
           <button
-            className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg"
+            className="font-bold mt-4 bg-blue-500 text-white rounded p-4 shadow-lg"
             onClick={MintNfts}
           >
             ListNFT
